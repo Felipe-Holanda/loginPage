@@ -1,0 +1,259 @@
+:root{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --brand1: #582BD5;
+    --brand2: #2A6BF7;
+    --grey1: #4220A0;
+    --grey2: #4E81F7;
+    --grey3: #82A6FA;
+    --grey4: #E9ECEF;
+    --grey5: #F1F3F5;
+    --grey6: #F8F9FA;
+}
+
+.modal{
+    position: fixed;
+    display: flex;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0.75;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.25;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.modal:not(:focus){
+    animation: fadeIn 0.2s forwards;
+}
+
+@keyframes showUp{
+    0%{
+        scale: 0;
+    }
+    25%{
+        scale: 0.25;
+    }
+    50%{
+        scale: 0.5
+    }
+    75%{
+        scale: 0.75
+    }
+    100%{
+        scale: 1
+    }
+}
+
+@keyframes showDown{
+    0%{
+        scale: 1;
+    }
+    25%{
+        scale: 0.75;
+    }
+    50%{
+        scale: 0.5
+    }
+    75%{
+        scale: 0.25
+    }
+    100%{
+        scale: 0
+    }
+}
+
+.modal form{
+    width: 80%;
+    padding: 2em;
+    border-radius: 1em;
+    background-color: var(--grey6);
+}
+
+.modal form:not(:focus){
+    animation: showUp 0.5s ease-out;
+}
+
+.modal form h2{
+    font-size: 3vh;
+    font-weight: bolder;
+    margin-bottom: 2em;
+    color: var(--grey2);
+}
+
+.modal form p{
+    margin: 1em;
+    line-height: 1.5em;
+}
+
+#closeBtn{
+    position: absolute;
+    left: 80%;
+    padding: .5em;
+    border-radius: 100%;
+    width: 1em;
+    height: 1em;
+    color: var(--grey2);
+    background-color: var(--grey5);
+    cursor: pointer;
+    text-align: center;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey3);
+    padding: 2rem;
+    color: var(--grey6);
+    font-weight: 700;
+    text-align: center;
+}
+
+img{
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 2rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 1rem 2rem;
+    align-self: left;
+    color: var(--grey2);
+}
+
+input{
+    margin: 1rem 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--grey4);
+}
+
+a{
+    margin: 0em 2em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--grey2);
+    text-decoration: none;
+    align-self: center;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+button{
+    margin: 1rem 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--grey2);
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--grey3);
+}
+
+@media screen and (min-width: 768px){
+    body{
+        background-color: var(--grey1);
+    }
+    main{
+        padding: 7rem;  
+        display: flex;
+        flex-direction: column;
+
+    }
+    main div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    section{
+        width: 50vh;
+        height: 50vh;
+        border-radius: 1em 0 0 1em;
+    }
+    section p{
+        text-align: center;
+        font-size: small;
+    }
+    section img{
+        width: 100%;
+        max-width: 300px;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    form{
+        width: 60vh;
+        height: 59.4vh;
+        border-radius: 0 1em 1em 0;
+        background-color: var(--grey6);
+    }
+    h1{
+        margin-top: 1em;
+        text-shadow: 0 0 1px rgba(0,0,0,0.5);
+    }
+    .modal form{
+        width: 40%;
+    }
+    #closeBtn{
+        position: absolute;
+        left: 65%;
+        padding: .5em;
+        border-radius: 100%;
+        width: 1em;
+        height: 1em;
+        color: var(--grey2);
+        background-color: var(--grey5);
+        cursor: pointer;
+        text-align: center;
+    }
+}

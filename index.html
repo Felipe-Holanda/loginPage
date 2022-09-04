@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbital Cloud | Index</title>
+    <meta name="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <link rel="stylesheet" href="./assets/style/login.css">
+</head>
+<body>
+    <span id="modal" class="modal">
+        <form>
+            <h2>Recuperar acesso</h2>
+            <span id="closeBtn">x</span>
+            <p>Esqueceu a senha?</p>
+            <p>Não tem problema, basta inserir seu e-mail abaixo e lhe auxiliaremos a recuperar o seu acesso!</p>
+            <input type="email" name="email" id="email" placeholder="E-mail de recuperação" required>
+            <button id="recoverBtn" type="submit">Redefinir senha</button>
+        </form>
+    </span>
+    <main>
+        <div>
+            <section>
+                <figure><img src="./assets/misc/logo-cloud-white.png" alt="Logo da Orbital, contendo uma núvem com representações de cabos."></figure>
+                <p id="hints">Promovendo um excelente custo-benefício desde 2009!</p>
+            </section>
+            <form>
+                <h1>Autentique-se</h1>
+                <input id="loginMail" type="email" placeholder="Insira o seu e-mail" required>
+                <input id="loginPass" type="password" placeholder="Insira a sua senha" required>
+                <a id="forgotPass">Esqueceu sua senha?</a>
+                <button id="loginBtn" type="submit">Entrar</button>
+            </form>
+        </div>
+    </main>
+    <script src="./assets/scripts/app.js"></script>
+</body>
+</html>
